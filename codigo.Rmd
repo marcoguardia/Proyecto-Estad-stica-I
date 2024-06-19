@@ -338,6 +338,10 @@ table(oscore, base$Cannabis)
 chisq.test(table(oscore, base$Cannabis))
 cramerV(table(oscore, base$Cannabis))
 
+table(oscore, base$Nicotine)
+chisq.test(table(oscore, base$Nicotine))
+cramerV(table(oscore, base$Nicotine))
+
 table(oscore, base$Coke)
 chisq.test(table(oscore, base$Coke))
 cramerV(table(oscore, base$Coke))
@@ -349,10 +353,6 @@ cramerV(table(oscore, base$Heroin))
 table(oscore, base$Meth)
 chisq.test(table(oscore, base$Meth))
 cramerV(table(oscore, base$Meth))
-
-table(oscore, base$Nicotine)
-chisq.test(table(oscore, base$Nicotine))
-cramerV(table(oscore, base$Nicotine))
 ```
 
 ```{r Resultados de N-score}
@@ -363,6 +363,10 @@ cramerV(table(nscore, base$Alcohol))
 table(nscore, base$Cannabis)
 chisq.test(table(nscore, base$Cannabis))
 cramerV(table(nscore, base$Cannabis))
+
+table(nscore, base$Nicotine)
+chisq.test(table(nscore, base$Nicotine))
+cramerV(table(nscore, base$Nicotine))
 
 table(nscore, base$Coke)
 chisq.test(table(nscore, base$Coke))
@@ -376,9 +380,6 @@ table(nscore, base$Meth)
 chisq.test(table(nscore, base$Meth))
 cramerV(table(nscore, base$Meth))
 
-table(nscore, base$Nicotine)
-chisq.test(table(nscore, base$Nicotine))
-cramerV(table(nscore, base$Nicotine))
 ```
 
 ```{r Rseultados de E-score}
@@ -389,6 +390,10 @@ cramerV(table(escore, base$Alcohol))
 table(escore, base$Cannabis)
 chisq.test(table(escore, base$Cannabis))
 cramerV(table(escore, base$Cannabis))
+
+table(escore, base$Nicotine)
+chisq.test(table(escore, base$Nicotine))
+cramerV(table(escore, base$Nicotine))
 
 table(escore, base$Coke)
 chisq.test(table(escore, base$Coke))
@@ -402,9 +407,6 @@ table(escore, base$Meth)
 chisq.test(table(escore, base$Meth))
 cramerV(table(escore, base$Meth))
 
-table(escore, base$Nicotine)
-chisq.test(table(escore, base$Nicotine))
-cramerV(table(escore, base$Nicotine))
 ```
 
 
@@ -416,6 +418,10 @@ cramerV(table(ascore, base$Alcohol))
 table(ascore, base$Cannabis)
 chisq.test(table(ascore, base$Cannabis))
 cramerV(table(ascore, base$Cannabis))
+
+table(ascore, base$Nicotine)
+chisq.test(table(ascore, base$Nicotine))
+cramerV(table(ascore, base$Nicotine))
 
 table(ascore, base$Coke)
 chisq.test(table(ascore, base$Coke))
@@ -429,9 +435,6 @@ table(ascore, base$Meth)
 chisq.test(table(ascore, base$Meth))
 cramerV(table(ascore, base$Meth))
 
-table(ascore, base$Nicotine)
-chisq.test(table(ascore, base$Nicotine))
-cramerV(table(ascore, base$Nicotine))
 ```
 
 ```{r Resultados de C-score}
@@ -458,7 +461,6 @@ cramerV(table(cscore, base$Heroin))
 table(cscore, base$Meth)
 chisq.test(table(cscore, base$Meth))
 cramerV(table(cscore, base$Meth))
-
 
 ```
 
