@@ -311,11 +311,17 @@ personalidad, procedemos a crear intervalos en estas variables para usarlos en l
 tablas de contingencia.
 
 ```{r Discretizar los Scores}
-oscore <- cut(base$Oscore,breaks = 3)
-nscore <- cut(base$Nscore,breaks = 3)
-escore <- cut(base$Escore,breaks = 3)
-ascore <- cut(base$AScore,breaks = 3)
-cscore <- cut(base$Cscore,breaks = 3)
+cortes <- qnorm(
+    p = c(0, 1 / 4, 2 / 4, 3 / 4, 1),
+    mean = 0,
+    sd = 1
+)
+
+oscore <- cut(base$Oscore, breaks = cortes)
+nscore <- cut(base$Nscore, breaks = cortes)
+escore <- cut(base$Escore, breaks = cortes)
+ascore <- cut(base$AScore, breaks = cortes)
+cscore <- cut(base$Cscore, breaks = cortes)
 ```
 
 A continuación se presenta el proceso de resultados. Para entender estos resultados
@@ -437,6 +443,10 @@ table(cscore, base$Cannabis)
 chisq.test(table(cscore, base$Cannabis))
 cramerV(table(cscore, base$Cannabis))
 
+table(cscore, base$Nicotine)
+chisq.test(table(cscore, base$Nicotine))
+cramerV(table(cscore, base$Nicotine))
+
 table(cscore, base$Coke)
 chisq.test(table(cscore, base$Coke))
 cramerV(table(cscore, base$Coke))
@@ -449,9 +459,7 @@ table(cscore, base$Meth)
 chisq.test(table(cscore, base$Meth))
 cramerV(table(cscore, base$Meth))
 
-table(cscore, base$Nicotine)
-chisq.test(table(cscore, base$Nicotine))
-cramerV(table(cscore, base$Nicotine))
+
 ```
 
 ```{r Resultados de Educacion}
